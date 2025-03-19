@@ -1,11 +1,11 @@
-import { lusitana } from '@/app/ui/fonts';
+import { lusitana } from "./font";
 import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
-} from '@heroicons/react/24/outline';
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './button';
+} from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { Button } from "./button";
 
 export default function LoginForm() {
   return (
@@ -18,8 +18,7 @@ export default function LoginForm() {
           <div>
             <label
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
-              htmlFor="email"
-            >
+              htmlFor="email">
               Email
             </label>
             <div className="relative">
@@ -37,8 +36,7 @@ export default function LoginForm() {
           <div className="mt-4">
             <label
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
-              htmlFor="password"
-            >
+              htmlFor="password">
               Password
             </label>
             <div className="relative">
