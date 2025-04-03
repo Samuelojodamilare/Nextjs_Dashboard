@@ -116,25 +116,25 @@ async function seedRevenue() {
 //   }
 // }
 
-// export async function GET() {
-//   try {
-//     // Remove unused variables by not assigning the result
-//     await sql.begin(async (sql) => {
-//       await seedUsers();
-//       await seedCustomers();
-//       await seedInvoices();
-//       await seedRevenue();
-//     });
+export async function GET() {
+  try {
+    // Remove unused variables by not assigning the result
+    await sql.begin(async () => {
+      await seedUsers();
+      await seedCustomers();
+      await seedInvoices();
+      await seedRevenue();
+    });
 
-//     return Response.json({ message: "Database seeded successfully" });
-//   } catch (error) {
-//     console.error("Database Seeding Error:", error);
-//     return Response.json(
-//       {
-//         message: "Failed to seed database",
-//         error: error instanceof Error ? error.message : "Unknown error",
-//       },
-//       { status: 500 }
-//     );
-//   }
-// }
+    return Response.json({ message: "Database seeded successfully" });
+  } catch (error) {
+    console.error("Database Seeding Error:", error);
+    return Response.json(
+      {
+        message: "Failed to seed database",
+        error: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 }
+    );
+  }
+}
